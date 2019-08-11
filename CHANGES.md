@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file. This project adheres to
 [Semantic Versioning][Semantic Versioning]
 
+## 1.4.0
+Skipping .3 as it is unlucky number
+
 ## 1.2.0
 Added CI for both travis and github actions.
 
