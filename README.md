@@ -1,5 +1,7 @@
 # qualifier
 
+[![Build Status](https://travis-ci.org/srikalyan/qualifier.svg?branch=master)](https://travis-ci.org/srikalyan/qualifier)
+
 ## Description:
 A simple python project used for updating the qualifier part of the version for python projects.
 
