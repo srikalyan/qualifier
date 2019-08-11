@@ -1,10 +1,17 @@
 dist: xenial
 language: python
 python:
-  - "3.7"
-# Install tox
+- '3.7'
 install:
-  - pip install tox
-# Build the project
+- pip install tox
 script:
-  - tox
+- tox
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: AhYzFH/h1rkmOTucMqJ2lmufR8rsTmyf1NluDXX0YCm+GS7Me0ElwAq/rPq6VnMOdea3Mx8cZfjGiLzPbhUgtq1GaOzjjiTybF4F81tkUld+gLBgpepXsBaH6ixiZCWxbUEDd/C0M4FU86FVkdCjR0FDbqmtvvGib7Xa04ZcPDXhgnh3EdpwpBo/CS+36ebfonMRX7TZ51vlQ1Bh1u0+ZjHeoHw52Ke6BFBJ/OPkX+IBreQ2ylb6optgFCphWjw6g6cd3rYiXkcWwMR6fCEgYAdmg5vA5vYVNyNB/h686nnhlGg6EnCe2xgZnHuyRfL7LdTUT7VxvwnpVeJTg11yYaJgr8A2CNh/ZJ4BRYpaUytjGJVMnz8hVE9PwqW6AWdLSyBpPQyLlGSVLWMU+uki2WFmy4XlXRYeFRRmmvrHbjHMW+EgnwCxp7xQ04edjFKlpDnGG20m2RSdpuCZ3WdCN4dprlcMVNb1RenhFwZlMjFltHyXrl0U4oKS0W+rr/QEbUR8jkTVLoY29CnMTrVe2WchCee9kN8Bpvf4fgYsOoF9yM5DgcSfnGJjML+4ESXpDzspdlhbWSgt7KwopBxWIED3AwVbpJapG999y5MY0kyuxEK8/mWMaqm89hlBZteDARSlpiGEaW2H9P7o/1Z3mtxtUNm83DM66Jn0/pCMZ3A=
+  skip_existing: true
+  distributions: "sdist bdist_wheel"
+  on:
+    tags: true

@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file. This project adheres to
 [Semantic Versioning][Semantic Versioning]
 
+## 1.2.0
+Added CI for both travis and github actions.
+
 ## 1.1.0
 Added long description for pypi project.
 
