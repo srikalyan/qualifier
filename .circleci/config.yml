@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            pip install tox
+      - run:
+          name: Run tests
+          command: |
+            tox
+      - store_artifacts:
+          path: ~/repo/dist
