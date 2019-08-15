@@ -11,7 +11,7 @@ jobs:
           command: |
             sudo pip install tox
       - run:
-          name: Run tests
+          name: Build
           command: |
             tox
       - store_artifacts:
