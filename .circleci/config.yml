@@ -9,10 +9,10 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            sudo pip install tox
+            sudo pip install tox qualifier
       - run:
           name: Build
           command: |
-            tox
+            qualifier && tox
       - store_artifacts:
           path: ~/repo/dist
