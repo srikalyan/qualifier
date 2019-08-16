@@ -6,7 +6,6 @@ install:
   - pip install tox qualifier
 script:
   - update_qualifier
-script:
   - tox
 deploy:
   provider: pypi
