@@ -13,6 +13,6 @@ jobs:
       - run:
           name: Build
           command: |
-            qualifier && tox
+            update_qualifier && tox
       - store_artifacts:
           path: ~/repo/dist
