@@ -11,8 +11,12 @@ jobs:
           command: |
             sudo pip install tox qualifier
       - run:
-          name: Build
+          name: Update qualifier
           command: |
-            update_qualifier && tox
+            update_qualifier
+      - run:
+          name: Build the project
+          command: |
+            tox
       - store_artifacts:
           path: ~/repo/dist
