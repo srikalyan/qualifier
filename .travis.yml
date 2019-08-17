@@ -5,7 +5,7 @@ python:
 install:
   - pip install tox qualifier
 script:
-  - update_qualifier
+  - update_qualifier --no-use-git --branch-name $TRAVIS_BRANCH --tag-name $TRAVIS_TAG
   - tox
 deploy:
   provider: pypi
