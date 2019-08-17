@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file. This project adheres to
 [Semantic Versioning][Semantic Versioning]
 
+## 1.5.0
+
 ## 1.4.0
 Skipping .3 as it is unlucky number
 Added CI related changes to support release builds when the branch is tag name.

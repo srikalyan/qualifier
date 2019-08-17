@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="qualifier",
-    version="1.4.0" + __QUALIFIER__,
+    version="1.5.0" + __QUALIFIER__,
     description="A simple python project used for updating the qualifier part of the version for python projects.",
     long_description=long_description,
     long_description_content_type="text/markdown",
