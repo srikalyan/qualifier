@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ## 1.4.0
 Skipping .3 as it is unlucky number
+Added CI related changes to support release builds when the branch is tag name.
 
 ## 1.2.0
 Added CI for both travis and github actions.

@@ -121,6 +121,16 @@ class TestExecutor(object):
                 mock_get_tag_name.assert_called_once_with()
                 mock_get_branch_name.assert_called_once_with()
 
+    def test_generate_qualifier_no_qualifier_with_tag_branch(self):
+        with patch.object(self.executor, "_get_branch_name") as mock_get_branch_name:
+            with patch.object(self.executor, "_get_tag_name") as mock_get_tag_name:
+                mock_get_branch_name.return_value = self.tag_name
+                mock_get_tag_name.return_value = self.tag_name
+                assert_that(self.executor._generate_qualifier(), is_(equal_to(None)))
+
+                mock_get_tag_name.assert_called_once_with()
+                mock_get_branch_name.assert_called_once_with()
+
     @patch("time.time")
     def test_generate_qualifier_with_rc_qualifier(self, mock_time):
         mock_time_value = 20

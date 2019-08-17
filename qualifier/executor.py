@@ -68,7 +68,7 @@ class Executor(object):
         current_branch = self._get_branch_name()
         tag_name = self._get_tag_name()
 
-        if tag_name and current_branch == self.rc_branch:
+        if tag_name and (current_branch == self.rc_branch or current_branch == tag_name):
             return None
 
         logger.debug("Current branch name is {}".format(current_branch))
