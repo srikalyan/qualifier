@@ -1,6 +1,10 @@
 # qualifier
 
-[![Build Status](https://travis-ci.org/srikalyan/qualifier.svg?branch=master)](https://travis-ci.org/srikalyan/qualifier)
+## Build Status
+Traivs: [![Build Status](https://travis-ci.org/srikalyan/qualifier.svg?branch=master)](https://travis-ci.org/srikalyan/qualifier)
+
+Circleci: [![CircleCI](https://circleci.com/gh/srikalyan/qualifier.svg?style=svg)](https://circleci.com/gh/srikalyan/qualifier)
+
 
 ## Description:
 A simple python project used for updating the qualifier part of the version for python projects.
