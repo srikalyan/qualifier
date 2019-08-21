@@ -6,16 +6,13 @@ cache:
   paths:
   - /root/.cache
 stages:
-  - qualifier
   - build
-
-qualifier:
-  stage: qualifier
-  script:
-    - update_qualifier --no-use-git --branch-name "$CI_COMMIT_REF_NAME" --tag-name "$CI_COMMIT_TAG"
 
 build:
   stage: build
   script:
+    - update_qualifier --no-use-git --branch-name "$CI_COMMIT_REF_NAME" --tag-name "$CI_COMMIT_TAG"
     - tox
-
+  artifacts:
+    paths:
+      - dist/
