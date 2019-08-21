@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file. This projec
 [Semantic Versioning][Semantic Versioning]
 
 ## 1.5.0
+Added support to move files across filesystems while updating setup.py
+Added few more CI configurations
 
 ## 1.4.0
 Skipping .3 as it is unlucky number

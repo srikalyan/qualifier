@@ -1,4 +1,5 @@
 import shlex
+import shutil
 import subprocess
 import time
 import os
@@ -87,7 +88,7 @@ class Executor(object):
                 for line in current_file:
                     temp_file.write(line.replace(self.qualifier_expression, new_qualifier_expression))
 
-        os.rename(file_path, self.qualifier_file_name)
+        shutil.move(file_path, self.qualifier_file_name)
 
     def run(self):
         qualifier = self._generate_qualifier()
